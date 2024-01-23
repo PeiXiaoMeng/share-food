@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "share-food",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}

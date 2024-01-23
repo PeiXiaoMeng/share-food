@@ -1,0 +1,62 @@
+.list {
+  padding: 0 16px 0 16px;
+}
+
+.food {
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #f7f7f7;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__headUrl {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  &__userName {
+    font-size: 26px;
+  }
+  &__label {
+    font-size: 18px;
+    color: #3f3f3f;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+  }
+  &__desc {
+    font-size: 16px;
+    color: #3f3f3f;
+  }
+  &__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
+  &__img {
+    width: 230px;
+    height: 230px;
+    margin-right: 14px;
+    border-radius: 8px;
+  }
+  &__img:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
