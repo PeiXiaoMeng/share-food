@@ -1,0 +1,94 @@
+.label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 20px;
+  &__box {
+    width: 6px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #6190E8;
+    margin-right: 10px;
+  }
+  &__text {
+    font-weight: bold;
+  }
+  &__require {
+    color: red;
+    margin-left: 10px;
+  }
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  .item-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+    .item-name {
+      font-size: 26px;
+      color: #333;
+      font-weight: 500;
+    }
+    .item-arrow {
+      margin-left: 20px;
+      width: 0;
+      height: 0;
+      margin-top: 10px;
+      border-width: 10px; /*控制箭头的大小 */
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+  }
+}
+
+.cont {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.btn {
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+}
+
+.condition {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__box {
+    padding: 10px 20px 10px 20px;
+    // background-color: #6190E8;
+    border-radius: 40px;
+    margin-left: 20px;
+    background-color: #fff;
+    border: 1px solid #6190E8;
+    Text {
+      color: #6190E8;
+    }
+  }
+
+  .active {
+    background-color: #6190E8;
+    Text {
+      color: #fff;
+    }
+  }
+}
+
+
+/* taro-ui样式修改 */
+.at-input-number__btn {
+  width: 30px;
+}
+.at-input-number {
+  height: 60px;
+}
+.at-input-number__input, .at-input-number input {
+  height: 60px;
+}

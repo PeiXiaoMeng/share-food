@@ -117,6 +117,7 @@ const Home = () => {
       console.log('condition');
       console.log(result);
       setCond(result);
+      Taro.setStorageSync('condition', result);
       http.get('field', {}, {})
         .subscribe(({ result: res }) => {
           if (!res) return;
@@ -127,8 +128,14 @@ const Home = () => {
   }, [])
 
   const linkTo = (id?: number) => {
+    if (id) {
+      Taro.navigateTo({ 
+        url: `/pages/detail/index?id=${id}`,
+      })
+    }
+
     Taro.navigateTo({ 
-      url: `/pages/detail/index?id=${id}`,
+      url: `/pages/content/index`,
     })
   }
 

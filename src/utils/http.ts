@@ -43,6 +43,9 @@ export const request = (config: any) => {
  */
 const getMethodRequest = (method: Method) => (url: string, params: any = {}, config: any): any => {
   if (config.showLoading) Taro.showLoading({ title: config.loadingText || 'loading', mask: config.loadingMask });
+  const token = Taro.getStorageSync('token');
+  console.log(token);
+  console.warn('====>>>>>token');
   return new Observable((observer) => {
     of(config).pipe(
       switchMap(() => {
@@ -52,6 +55,9 @@ const getMethodRequest = (method: Method) => (url: string, params: any = {}, con
           data: params,
           mode: 'cors',
           ...config,
+          header: token ? {
+            'Authorization': `Bearer ${token.token}`
+          }: {},
         })
       })
     ).subscribe(observer);
